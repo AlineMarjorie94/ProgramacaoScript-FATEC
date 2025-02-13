@@ -1,0 +1,7 @@
+body {background: url() center;}
+header, main, footer {
+    border: 1px solid black;
+    width: 200px;
+    margin: auto;
+    overflow: hidden;
+}

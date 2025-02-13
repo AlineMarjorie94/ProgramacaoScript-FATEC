@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">    
+        class Contato {
+            constructor(nome, telefone, celular, email){
+                this.nome = nome;
+                this.telefone = telefone;
+                this.celular = celular;
+                this.email = email;
+            }
+        }
+        function listarContatos (lista){
+            let auxHTML = "";
+            for(let i = 0; i < lista.length; i++){
+                auxHTML += "<li>"+ "Nome: " + lista[i].nome +  
+                    "<br> Telefone: "+lista[i].telefone +  
+                    "<br> Celular: "+lista[i].celular +
+                    "<br> E-mail: "+lista[i].email + "</li>" + "<br>";
+            }
+            return auxHTML;
+        }
+
+        let contato1 = new Contato ("Aline Silva", "16 3333-3333", "16 99999-9999", "aline@silva.com");
+        let contato2 = new Contato ("Beatriz Ferreira", "11 1234-1234", "11 12345-1234", "beatriz@ferreira.com");
+        let contato3 = new Contato ("Otavio Sudano", "18 1111-1111", "18 11111-1111", "otavio@sudano.com");
+
+        let listaContato = [];
+
+
+        window.onload = function(){
+            document.getElementById("frmContato").onsubmit = function(evento){
+                evento.preventDefault();
+                let nome = document.getElementById("nome").value;
+                let telefone = document.getElementById("telefone").value;
+                let celular = document.getElementById("celular").value;
+                let email = document.getElementById("email").value;
+                let novoContato = new Contato(nome, telefone, celular, email);
+                listaContato.push(novoContato);
+                document.getElementById("lista").innerHTML = listarContatos(listaContato);
+                document.getElementById("nome").value = "";
+                document.getElementById("telefone").value = "";
+                document.getElementById("celular").value = "";
+                document.getElementById("email").value = "";
+
+            }
+    }
+    </script>
+    <title>Aula 08 - Orientação a Objeto</title>
+    <link rel="stylesheet" href="AtividadeCSS.css">
+    
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Formulário de Cadastro</h1><br>
+    </header>
+    <img id="img" src="htmlcss.jpg">
+    <main>
+        <form id="frmContato">
+            <label>Nome: </label><br>
+            <input type="text" id="nome" placeholder="Nome" class="campo">
+            <br>
+            <label>Telefone: </label><br>
+            <input type="text" id="telefone" placeholder="Telefone" class="campo">
+            <br>
+            <label>Celular: </label><br>
+            <input type="text" id="celular" placeholder="Celular" class="campo">
+            <br>
+            <label>E-mail: </label><br>
+            <input type="text" id="email" placeholder="E-mail" class="campo">
+            <br>
+            <button class="botao">Adicionar</button>
+        </form>
+        <ul id="lista"></ul>
+    </main>
+    <footer>
+        <p>Atividade javascript/HTML/CSS</p>
+        <p style="margin-left: 50px;">Aline Marjorie</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 5</title>
+
+        <script type="text/javascript">
+            var nome = prompt('Informe seu nome'); // Declarando variável com var (utilizado para navegadores mais antigos)
+            let sobrenome = prompt('Informe seu sobrenome'); // Declarando variável com let (utilizada mais atualmente)
+            const idade = prompt('Informe sua idade'); // Declarando variável com const (não pode ser modificada depois de declarada)
+            alert('Seu nome é ' + nome + ' ' + sobrenome + ', você tem ' + idade + ' anos'); // Mostrar mensagem de alerta com as variáveis
+
+            let valor_1 = prompt('Indorme o primeiro valor');
+            let valor_2 = prompt('Informe o segundo valor');            
+
+            /*if (isNaN(valor_1) || isNaN(valor_2) || valor_1 == '' || valor_2 == '') { // Verificar se uma das variáveis não é um número
+                alert('Valores inválidos');
+            }
+            else if (valor_1.indexOf(' ')!= -1 || valor_2.indexOf(' ') != -1 )  { 
+                alert('Não utilize espaços!')   //Gerar alerta para usuários
+            }
+            else {
+                valor_1 = parseFloat(valor_1); // Converter string para float
+                valor_2 = parseFloat(valor_2);
+                resultado = valor_1 + valor_2;
+
+                alert('O resultado da soma é ' + resultado);
+            } */
+            
+            if (!isNaN(valor_1) && !isNaN(valor_2) && valor_1 != '' && valor_2 != '' && valor_1.indexOf(' ') == -1 && valor_2.indexOf(' ') == -1) { // Verificar se uma das variáveis não é um número
+                alert('Valores inválidos');
+                valor_1 = parseFloat(valor_1); // Converter string para float
+                valor_2 = parseFloat(valor_2);
+                resultado = valor_1 + valor_2;
+
+                alert('O resultado da soma é ' + resultado);
+            }                         
+            /*if (valor_1 > 0) {
+                alert ('O número é positivo!')
+            }
+            else if (valor_1 < 0) {
+                alert ('O número é negativo!')
+
+            }
+            else {
+                alert('Informe apenas números!')
+            }  */
+                   
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>

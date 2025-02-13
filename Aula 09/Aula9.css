@@ -1,0 +1,27 @@
+body {background: url(blackpink.jpg) center;}
+header, main, footer {
+    border: 1px solid black;
+    width: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+#btnLogin {
+    font-size: 15px; padding: 5px;
+}
+.fundo{
+    background: pink;
+    width: 190px;
+    padding: 5px;
+}
+.fundo :hover {
+    background: black;
+    cursor: pointer;
+}
+.texto {
+    font-size: 20px;
+}
+/* 
+* {
+    margin: 10px;
+}
+*/

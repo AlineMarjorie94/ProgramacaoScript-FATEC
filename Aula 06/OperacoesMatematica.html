@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Matemática</title>
+    <script type="text/javascript">
+     
+    while (true) {
+            
+        let valor_1 = parseFloat(prompt("Indorme o primeiro valor"));
+        let valor_2 = parseFloat(prompt("Informe o segundo valor"));
+        let operacao = prompt("+, -, x, /");
+        let resultado
+
+        if (operacao == "+") {
+            resultado = valor_1 + valor_2;
+        } 
+        else if (operacao == "-"){
+            resultado = valor_1 - valor_2;
+        }
+        else if (operacao == "x"){
+            resultado = valor_1 * valor_2;
+        }
+        else if (operacao == "/"){
+            resultado = valor_1 / valor_2;
+        }
+        else {
+            resultado = "Operação Inválida"
+        }
+        alert("Resultado: "+ resultado)
+        continuar = prompt("Deseja fazer outra operação?")
+        if (continuar == "não"){
+            break
+        }
+    }
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

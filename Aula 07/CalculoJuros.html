@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cáculo de Juros</title>
+    <script>
+    function verificarNumero(numero) {
+        if(!isNaN(numero) && numero != "" && numero.indexOf(" ") == -1){
+            return true
+        } 
+        else {
+            return false
+        }        
+    }
+    function acrescimo(valor, juros){
+        valor = parseFloat(valor);
+        juros = parseFloat(juros);
+        return (valor + valor * (juros/100))
+    }
+    window.onload = function(){
+        document.getElementById("btnCalcular").onclick = function () {
+            let valor = document.getElementById("valor").value;
+            let juros = document.getElementById("juros").value;
+            if (verificarNumero(valor) && verificarNumero(juros)) {
+                document.getElementById("resultado").innerHTML = "Resultado: " + acrescimo(valor, juros);
+            } 
+            else {
+                alert("Informe apenas Números!");
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>Cáculo Juros</h1>
+    <input type="number" placeholder="valor" id="valor">
+    <br>
+    <br>
+    <input type="number" placeholder="juros" id="juros">
+    <br>
+    <br>
+    <button id="btnCalcular">Calcular</button>
+    <p id="resultado">Resultado:</p>
+</body>
+</html>
