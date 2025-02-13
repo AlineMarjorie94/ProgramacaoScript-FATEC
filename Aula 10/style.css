@@ -1,0 +1,88 @@
+h1{
+    text-align: left;
+    color: white;
+    text-align: center;
+    
+    }
+
+body {
+    font-family: sans-serif;
+    background-image: url(fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    }
+    
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    }
+    
+label {
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    }
+    
+button {
+    font-size: 15px;
+    background: #4B0082;
+    border: 0;
+    color: #ffffff;
+    padding: 2px 5px;
+    height: 30px;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 15px;
+    }
+
+#mostrar {
+    margin-left: 170px;
+}
+
+
+form {
+    margin-bottom: 20px;
+    }
+
+select {
+    border-radius: 5px;
+    font-size: 15px;
+    height: 25px;
+    color: #A020F0;
+    text-align: center;
+    }
+    
+table {
+    border-collapse: collapse;
+    width: 750px;    
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color:#BA55D3;
+    margin-bottom: 20px;
+    color:#ffffff;
+    margin: auto;
+
+    }
+    
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    }
+    
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+    }
+p {
+    text-align: left;
+    color: #ffffff;
+    margin-left: 0;
+    text-align: center;
+}

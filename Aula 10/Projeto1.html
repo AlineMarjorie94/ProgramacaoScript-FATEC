@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function mostrarResposta() {            
+            if (document.getElementById("question").value == "caracteristicas-js") {
+                document.getElementById("historyTable").innerHTML += "<tr><th>Características da linguagem JavaScript</th><th>JavaScript é interpretada, orientada a eventos, dinâmica e executada no navegador.</th></tr>";
+            } else {
+                document.getElementById("historyTable").innerHTML += "<tr><th>Características dos eventos em JavaScript</th><th>Os eventos em JavaScript permitem capturar ações do usuário e responder a elas.</th></tr>";
+            }          
+           
+        }    
+        function limparResposta() {
+            document.getElementById("historyTable").innerHTML = "<tr><th>Pergunta</th><th>Resposta</th></tr>";                                     
+            }
+       
+    </script>
+    <title>Projeto 1</title>
+</head>
+<body>
+
+    <h1>Respostas sobre JavaScript</h1> 
+    
+    <form id="questionForm">
+        <label for="question">Escolha uma pergunta:</label>
+        <select id="question">
+            <option value="caracteristicas-js">Características da linguagem JavaScript</option>
+            <option value="eventos-js">Características dos eventos em JavaScript</option>
+        </select><br><br>
+        <button id="mostrar" type="button" onclick="mostrarResposta()">Mostrar Resposta</button>
+        <button id="limpar" type="button" onclick="limparResposta()">Limpar Resposta</button>   
+    </form>
+    
+    
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>Pergunta</th>
+                <th>Resposta</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table> 
+</body>
+<footer>
+    
+    <p>Projeto Aline Marjorie</p>
+</footer>
+</html>
